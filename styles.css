@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@100;200;300;350;400;500;600;700&display=swap');
+
+
+:root {
+    --primary-color: #55bfb1;
+    --secondary-color: #FFDDD2;
+    --text-color: #5F4B32;
+    --background-color: #fff;
+    --card-background: #f9f9f9;
+    --header-border-color: #5F4B32;
+}
+
+body {
+    font-family: 'Karla', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--background-color);
+    padding: 20px 0;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%; /* Adjust this value to change the line width */
+    max-width: 95%; /* This should be slightly less than your container max-width */
+    height: 1px;
+    background-color: var(--header-border-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-weight: 350;
+    font-size: 35px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-weight: 300;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle label {
+    width: 50px;
+    height: 26px;
+    background-color: #ccc;
+    border-radius: 13px;
+    position: relative;
+    cursor: pointer;
+}
+
+.theme-toggle label::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    top: 3px;
+    left: 3px;
+    transition: 0.3s;
+}
+
+.theme-toggle input:checked + label {
+    background-color: var(--primary-color);
+}
+
+.theme-toggle input:checked + label::after {
+    left: calc(100% - 23px);
+}
+
+.theme-toggle input {
+    display: none;
+}
+
+
+
+#hero {
+    background-color: var(--background-color);
+    padding: 80px 0;
+    position: center;
+}
+
+.hero-content {
+    display: flex;
+    position: relative;
+    align-items: top;
+    justify-content: space-between;
+    max-width: 100%; /* Adjust this value to be less than the container's 85% */
+    margin: 0 auto; /* This centers the hero content */
+}
+
+.hero-text {
+    flex: 1;
+    max-width:60%;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    margin: 0;
+    margin-top: 5px;
+    font-weight: 500;
+    padding-left: 20px;
+    background-color: var(--secondary-color);
+}
+
+.pronunciation {
+    font-style: italic;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.description {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    font-weight: 250;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    padding-left: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.btn-outline {
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+.btn-primary {
+    background-color: #55bfb1;
+    color: white;
+    border: none;
+}
+
+/*
+.hero-image {
+    flex: 1;
+    position: relative;
+    align-content: top;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 50%;
+    max-width: 80%;
+}
+
+.hero-image img {
+    width: 55%;
+    height: auto;
+    border-radius: 10px;
+}
+    */
+
+#work {
+    padding: 80px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin-top: 0;
+}
+
+#contact {
+    background-color: var(--secondary-color);
+    padding: 80px 0;
+    text-align: center;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info a {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--header-background);
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    header::after {
+        width: 90%; /* Slightly wider line on smaller screens */
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
