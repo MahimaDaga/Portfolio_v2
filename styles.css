@@ -23,14 +23,66 @@ body {
 .container {
     max-width: 85%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 header {
     background-color: var(--background-color);
-    padding: 30px 0 20px;
+    padding: 20px 0 20px;
     position: relative;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+    /*background-color: var(--background-color);*/
+    position: relative;
+}
+
+/* Nav Links (Desktop Mode) */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 0.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    /*font-size: 1rem;*/
+    padding: 0.5rem 0.4rem;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--text-color);
+    border-radius: 15px;
+    height: 0.2rem;
+}
+
+/* Hide the checkbox */
+.menu-checkbox {
+    display: none;
+}
+
+
+
  /* line after header 
 header::after {
     content: '';
@@ -334,6 +386,31 @@ footer {
   }  
 
 @media (max-width: 50rem) {
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--text-color);
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    /* Show menu when checkbox is checked */
+    .menu-checkbox:checked + .hamburger + .nav-links {
+        display: flex;
+    }
+
     header::after {
         width: 90%; /* Slightly wider line on smaller screens */
     }
