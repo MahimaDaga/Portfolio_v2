@@ -28,21 +28,21 @@ body {
 
 header {
     background-color: var(--background-color);
-    padding: 20px 0;
+    padding: 30px 0 20px;
     position: relative;
 }
-
+ /* line after header 
 header::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 88%; /* Adjust this value to change the line width */
-    max-width: 95%; /* This should be slightly less than your container max-width */
+    width: 88%; /* Adjust this value to change the line width 
+    max-width: 95%; /* This should be slightly less than your container max-width 
     height: 1px;
     background-color: var(--header-border-color);
-}
+} */
 
 header .container {
     display: flex;
@@ -127,7 +127,7 @@ nav ul li a {
     position: relative;
     align-items: top;
     justify-content: space-between;
-    max-width: 90%; /* Adjust this value to be less than the container's 85% */
+    max-width: 100%; /* Adjust this value to be less than the container's 85% */
     margin: 0 auto; /* This centers the hero content */
 }
 
@@ -184,10 +184,13 @@ nav ul li a {
     color: var(--text-color);
     background-color: transparent;
 }
+.btn-outline a:hover {
+    text-decoration: underline;
+  }
 
 .btn-primary {
     background-color: #55bfb1;
-    color: white;
+    color: var(--background-color);
     border: none;
 }
 
@@ -241,44 +244,96 @@ nav ul li a {
     margin-top: 0;
 }
 
-#contact {
-    background-color: var(--secondary-color);
-    padding: 80px 0;
-    text-align: center;
-}
 
-#contact form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#contact textarea {
-    width: 100%;
-    height: 150px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-info {
-    margin-top: 40px;
-}
-
-.contact-info a {
-    display: inline-block;
-    margin: 0 10px;
-    color: var(--text-color);
-    text-decoration: none;
-}
 
 footer {
-    background-color: var(--header-background);
-    padding: 20px 0;
-    text-align: center;
+        font-family: 'Karla', Arial, sans-serif;
+}
+    
+/* Contact/Footer section styling */
+.contact-section {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center; 
+    padding: 3.5rem 0rem; /* Some spacing top/bottom */
+  }
+  /* Parent flex container */
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Creates space between two items */
+    align-items: center;
+  margin-bottom: 2rem;
 }
 
-@media (max-width: 768px) {
+/* First flex item (title) */
+.contact-title {
+    font-size: 4.0rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 4rem;
+    width: 20rem;  
+}
+
+/* Second flex item: Group with Drop by! and email */
+.contact-details {
+    display: flex;
+    flex-direction: column; /* Stacks Drop by! and email */
+    align-items: center; /* Centers text */
+}
+
+/* "Drop by!" text */
+.contact-text {
+    font-size: 20px;
+    font-weight: 450;
+    margin-bottom: 0.01remx; /* Space between text and email */
+    align-items: center; 
+    width: 20rem;
+    height: 3.4rem;
+}
+  
+  /* Pill-shaped email link */
+  .email-pill {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    margin-top: 0;
+    padding: 6px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block; /* Makes the button respect the width and height */
+    text-align: center;
+    font-weight: 500;
+    white-space: nowrap;
+  } 
+  
+  /* Footer navigation links */
+  .footer-links {
+    margin: 3rem 0; /* spacing above/below the links */
+  }
+  
+  .footer-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact-section .star p {
+    color: #B79C7C;
+    font-size: 1.0rem; /* or 14px, or whatever smaller size you prefer */
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0; 
+  }  
+
+@media (max-width: 50rem) {
     header::after {
         width: 90%; /* Slightly wider line on smaller screens */
     }
@@ -300,4 +355,16 @@ footer {
     .project-grid {
         grid-template-columns: 1fr;
     }
+
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .contact-title, .contact-details {
+        min-width: 100%;
+    }
+
+
 }
