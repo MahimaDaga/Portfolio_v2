@@ -27,18 +27,43 @@
     padding: 50px 0; /* Adds space around */
 }
 
-.case-study-box {
+.case-study-container {
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 80%; 
     /* max-width: 90%;  Prevents it from stretching too wide */
-    background-color: #FDF7D9;
+}
+
+.case-study-box {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    margin-bottom: 5%;
+    /* max-width: 90%;  Prevents it from stretching too wide */
+    background-color: var(--background-color);
     padding: 40px;
     border-radius: 10px;
-    border: 0.2rem solid #FFCC00; /* Yellow border */
+    border: 0.2rem solid; /* Yellow border */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.case-study-via{
+    background-color: #FDF7D9;
+    border-color: #FFCC00;
+}
+
+.case-study-nxne{
+    background-color: #FEE2EF;
+    border-color: #E91977;
+}
+
+.case-study-wave{
+    background-color: #FED9D9;
+    border-color: #BF2823;
 }
 
 .case-study-box img {
