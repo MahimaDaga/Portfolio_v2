@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@100;200;300;350;400;500;600;700&display=swap');
 
-
 :root {
     --primary-color: #55bfb1;
     --secondary-color: #FFDDD2;
@@ -18,7 +17,20 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Make the body take full viewport height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
 
+/* Make content expand to push footer down 
+.content {
+    /* flex: 1; /* Takes up remaining space, pushing footer to the bottom 
+        flex-grow: 1; /* Ensures it expands *
+    } */
 
 .container {
     max-width: 85%;
@@ -30,6 +42,18 @@ header {
     background-color: var(--background-color);
     padding: 20px 0 20px;
     position: relative;
+}
+
+h1 {
+    font-weight: 350;
+    font-size: 35px;
+    margin: 0;
+    text-decoration: none; /* Ensures no underline by default */
+}
+
+h1 a {
+    text-decoration: none; /* Removes default link underline */
+    color: inherit; /* Keeps the same text color */
 }
 
 .navbar {
@@ -58,6 +82,10 @@ header {
     padding: 0.5rem 0.4rem;
 }
 
+.nav-links a:hover{
+    text-decoration: underline;
+}
+
 /* Hamburger Icon */
 .hamburger {
     display: none;
@@ -81,21 +109,6 @@ header {
     display: none;
 }
 
-
-
- /* line after header 
-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 88%; /* Adjust this value to change the line width 
-    max-width: 95%; /* This should be slightly less than your container max-width 
-    height: 1px;
-    background-color: var(--header-border-color);
-} */
-
 header .container {
     display: flex;
     justify-content: space-between;
@@ -105,11 +118,7 @@ header .container {
     padding: 0 20px;
 }
 
-h1 {
-    font-weight: 350;
-    font-size: 35px;
-    margin: 0;
-}
+
 
 nav ul {
     display: flex;
@@ -170,7 +179,7 @@ nav ul li a {
 
 #hero {
     background-color: var(--background-color);
-    padding: 80px 0;
+    padding: 80px 0 40px;
     position: center;
 }
 
@@ -236,7 +245,8 @@ nav ul li a {
     color: var(--text-color);
     background-color: transparent;
 }
-.btn-outline a:hover {
+
+.btn-outline:hover {
     text-decoration: underline;
   }
 
@@ -269,6 +279,10 @@ nav ul li a {
     padding: 80px 0;
 }
 
+.centered-heading {
+    text-align: center; /* Centers text horizontally */
+    padding-bottom: 2rem;
+}
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -300,6 +314,12 @@ nav ul li a {
 
 footer {
         font-family: 'Karla', Arial, sans-serif;
+        position: bottom
+}
+
+.footer {
+    background-color: var(--background-color); /* Adjust as needed */
+    text-align: center;
 }
     
 /* Contact/Footer section styling */
@@ -442,6 +462,5 @@ footer {
     .contact-title, .contact-details {
         min-width: 100%;
     }
-
 
 }

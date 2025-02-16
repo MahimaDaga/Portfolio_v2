@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@100;200;300;350;400;500;600;700&display=swap');
+
+.breadcrumbs {
+    display: flex;
+    list-style: none;
+    gap: 0.4rem;
+    max-width: 85%;
+    margin: 0 auto;
+
+}
+.breadcrumbs a {
+    text-decoration: none;
+    font-style: italic;
+    color: var(--text-color);
+    padding: 0.5rem 0.4rem;
+}
+
+.breadcrumbs a:hover{
+    text-decoration: underline;
+}
+
+.case-study {
+    display: flex; 
+    justify-content: center;
+    align-items: center; /*
+    min-height: 100vh; /* Full viewport height */
+    padding: 50px 0; /* Adds space around */
+}
+
+.case-study-box {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; 
+    /* max-width: 90%;  Prevents it from stretching too wide */
+    background-color: #FDF7D9;
+    padding: 40px;
+    border-radius: 10px;
+    border: 0.2rem solid #FFCC00; /* Yellow border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.case-study-box img {
+    max-width: 30%; /* Ensures it doesn’t exceed the container */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain;
+}
+
+.subheading {
+    font-size: x-large;
+    font-weight: bold;
+    width: 100%;
+    justify-content: left;
+}
+

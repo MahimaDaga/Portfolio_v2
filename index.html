@@ -4,154 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahima Daga/Home</title>
+    <link rel="icon" type="image/svg+xml" href="Images/favicon.svg">
+    <link rel="icon" type="image/png" href="Images/favicon.png" sizes="32x32">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Mahima Daga</h1>
-            
-            <!-- <nav>
-                <ul>
-                    <!-- Here is the toggle button 
-                    <!-- <div class="theme-toggle">
+    <div class="content">
+        <header>
+            <div class="container" id="top">
+                <h1>
+                    <a href="index.html">Mahima Daga</a>
+                </h1>
+                
+                <!-- <nav>
+                    <ul>
+                            <div class="theme-toggle">
+                            <input type="checkbox" id="theme-switch">
+                            <label for="theme-switch"></label>
+                        </div> 
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav> -->
+        
+                <nav class="navbar">
+                    <!-- Hamburger Menu (Checkbox Input) -->
+                    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                    <label for="menu-toggle" class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </label>
+                    
+                    <div class="theme-toggle">
                         <input type="checkbox" id="theme-switch">
                         <label for="theme-switch"></label>
                     </div> 
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav> -->
-       
-            <nav class="navbar">
-                <!-- Hamburger Menu (Checkbox Input) -->
-                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-                <label for="menu-toggle" class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </label>
-        
-                <!-- Navigation Links -->
-                <ul class="nav-links">
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
 
-        </div>
-    </header>
+                    <!-- Navigation Links -->
+                    <ul class="nav-links">
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
 
-    <break> </break>
+            </div>
+        </header>
 
-    <main>
-        <section id="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <div class="name-box">
-                        <h2>Mahima</h2>
-                        <p class="pronunciation">/ˈməhēmä/</p>
+        <break> </break>
+
+        <main>
+            <section id="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <div class="name-box">
+                            <h2>Mahima</h2>
+                            <p class="pronunciation">/ˈməhēmä/</p>
+                            </div>
+                            <p class="description">A UX Enthusiast based in Toronto, Canada. With a love for creative problem-solving, she's all about making digital experiences more enjoyable and exciting.</p>
+                            <div class="hero-buttons">
+                                <a href="#resume" class="btn btn-outline">View Resume</a>
+                                <a href="#contact" class="btn btn-primary">Let's Chat</a>
+                            </div>
                         </div>
-                        <p class="description">A UX Enthusiast based in Toronto, Canada. With a love for creative problem-solving, she's all about making digital experiences more enjoyable and exciting.</p>
-                        <div class="hero-buttons">
-                            <a href="#resume" class="btn btn-outline">View Resume</a>
-                            <a href="#contact" class="btn btn-primary">Let's Chat</a>
+                        
+                        <div class="hero-image">
+                            <img src="Images/mahimadaga_headshot.png" alt="Mahima Daga">
+                        </div> 
+                        <!-- Hero image is not commented out-->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+            <section id="work" class="container">
+                <h2 class="centered-heading">Work</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="Images/VIA Rail.png" alt="VIA Rail Project">
+                        <div class="project-info">
+                            <h3>1. VIA Rail</h3>
+                            <p>UX Research project</p>
+                            <p>An exploration into VIA Rail's website and Purchase path as of September 2023.</p>
+                            <a href="viarail.html" class="btn btn-primary">Case Study</a>
                         </div>
                     </div>
-                    
-                    <div class="hero-image">
-                        <img src="Images/mahimadaga_headshot.png" alt="Mahima Daga">
-                    </div> 
-                    <!-- Hero image is not commented out-->
+                    <div class="project-card">
+                        <img src="Images/NXNE.png" alt="NXNE Project">
+                        <div class="project-info">
+                            <h3>2. NXNE</h3>
+                            <p>UX Research, UI Design</p>
+                            <p>Designing a directory solution for NXNE music festival's event of 2024.</p>
+                            <a href="#" class="btn btn-primary">Case Study</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="Images/Mood Spending.png" alt="Wave - Mood Spending Project">
+                        <div class="project-info">
+                            <h3>3. Wave - Mood Spending</h3>
+                            <p>UX Research, UI Design</p>
+                            <p>Explore a problem space of users mood spending and designing innovative solutions in the form of an app.</p>
+                            <a href="#" class="btn btn-primary">Case Study</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+    <!-- 
+            <section id="contact" class="container">
+                <h2>Let's work together</h2>
+                <p>Drop by! I’m always down for a quick chat at</p>
+                <form>
+                    <textarea placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
 
-        <section id="work" class="container">
-            <h2>Work</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="Images/VIA Rail.png" alt="VIA Rail Project">
-                    <div class="project-info">
-                        <h3>1. VIA Rail</h3>
-                        <p>UX Research project</p>
-                        <p>An exploration into VIA Rail's website and Purchase path as of September 2023.</p>
-                        <a href="#1_viarail.html" class="btn btn-primary">Case Study</a>
-                    </div>
+                <div class="contact-info">
+                    <a href="https://linkedin.com/in/mahimadaga" target="_blank"><i class="fab fa-linkedin"></i> mahimadaga</a> 
+                    <a href="mailto:mahimadaga6@gmail.com"><i class="fas fa-envelope"></i> mahimadaga6@gmail.com</a> 
+                    <a href="mailto:mahimadaga6@gmail.com"></i> mahimadaga6@gmail.com</a> 
                 </div>
-                <div class="project-card">
-                    <img src="Images/NXNE.png" alt="NXNE Project">
-                    <div class="project-info">
-                        <h3>2. NXNE</h3>
-                        <p>UX Research, UI Design</p>
-                        <p>Designing a directory solution for NXNE music festival's event of 2024.</p>
-                        <a href="#" class="btn btn-primary">Case Study</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="Images/Mood Spending.png" alt="Wave - Mood Spending Project">
-                    <div class="project-info">
-                        <h3>3. Wave - Mood Spending</h3>
-                        <p>UX Research, UI Design</p>
-                        <p>Explore a problem space of users mood spending and designing innovative solutions in the form of an app.</p>
-                        <a href="#" class="btn btn-primary">Case Study</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!-- 
-        <section id="contact" class="container">
-            <h2>Let's work together</h2>
-            <p>Drop by! I’m always down for a quick chat at</p>
-            <form>
-                <textarea placeholder="Your message"></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
+            </section> -->
+        </main>
+        <!--<p>
+                Drop by! I’m always down for a quick chat at
+                <a href="mailto:mahimadaga6@gmail.com" class="email-pill">mahimadaga6@gmail.com</a>
+                </p> -->
 
-            <div class="contact-info">
-                <a href="https://linkedin.com/in/mahimadaga" target="_blank"><i class="fab fa-linkedin"></i> mahimadaga</a> 
-                <a href="mailto:mahimadaga6@gmail.com"><i class="fas fa-envelope"></i> mahimadaga6@gmail.com</a> 
-                <a href="mailto:mahimadaga6@gmail.com"></i> mahimadaga6@gmail.com</a> 
-            </div>
-        </section> -->
-    </main>
-     <!--<p>
-              Drop by! I’m always down for a quick chat at
-              <a href="mailto:mahimadaga6@gmail.com" class="email-pill">mahimadaga6@gmail.com</a>
-            </p> -->
-    <footer>
-        <section id="contact" class="contact-section">
-               <!-- Parent Flex Container -->
-            <div class="contact-container">
                 
-                <!-- First flex item: "Let's Work Together" -->
-                <h2 class="contact-title">Let's work together</h2>
-            
-                <!-- Second flex item: Grouped "Drop by" + Email -->
-                <div class="contact-details">
-                    <p class="contact-text">Drop by! I’m always down for a quick chat at</p>
-                    <a href="mailto:mahimadaga6@gmail.com" class="email-pill">mahimadaga6@gmail.com</a>
+        <footer class="footer">
+            <section id="contact" class="contact-section">
+                <!-- Parent Flex Container -->
+                <div class="contact-container">
+                    
+                    <!-- First flex item: "Let's Work Together" -->
+                    <h2 class="contact-title">Let's work together</h2>
+                
+                    <!-- Second flex item: Grouped "Drop by" + Email -->
+                    <div class="contact-details">
+                        <p class="contact-text">Drop by! I’m always down for a quick chat at</p>
+                        <a href="mailto:mahimadaga6@gmail.com" class="email-pill">mahimadaga6@gmail.com</a>
+                    </div>
+
                 </div>
 
-            </div>
-
-              <nav class="footer-links">
-              <a href="#top">Back to Top</a>
-              <a href="#about">About</a>
-              <a href="resume.pdf" target="_blank">View Resume</a>
-            </nav>
-        
-            <div class="star">
-                <p>Here's a star for making it to the end ⭐️</p>
-            </div>
-        </section>
-    </footer>
+                <nav class="footer-links">
+                <a href="#top">Back to Top</a>
+                <a href="#about">About</a>
+                <a href="resume.pdf" target="_blank">View Resume</a>
+                </nav>
+            
+                <div class="star">
+                    <p>Here's a star for making it to the end ⭐️</p>
+                </div>
+            </section>
+        </footer>
+    </div>
 </body>
 </html>
