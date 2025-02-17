@@ -51,6 +51,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+
 .case-study-via{
     background-color: #FDF7D9;
     border-color: #FFCC00;
@@ -79,3 +80,6 @@
     justify-content: left;
 }
 
+.subheading-via{
+    text-emphasis-color: #FF0000;
+}
