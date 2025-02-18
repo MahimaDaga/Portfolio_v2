@@ -29,7 +29,7 @@ html, body {
 /* Make content expand to push footer down 
 .content {
     /* flex: 1; /* Takes up remaining space, pushing footer to the bottom 
-        flex-grow: 1; /* Ensures it expands *
+        flex-grow: 1; /* Ensures it expands 
     } */
 
 .container {

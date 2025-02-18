@@ -7,6 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="Images/favicon.svg">
     <link rel="icon" type="image/png" href="Images/favicon.png" sizes="32x32">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -46,9 +47,9 @@
 
                     <!-- Navigation Links -->
                     <ul class="nav-links">
-                        <li><a href="work.html">Work</a></li>
+                        <li><a href="#work">Work</a></li>
                         <li><a href="#resume">Resume</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -58,13 +59,16 @@
 
         <break> </break>
 
-        <main>
+        <main> 
+            <div class="breadcrumbs">
+                <li><a href="index.html">Home</a></li>
+                <li>></li>
+                <li><a>Work</a></li>
+            </div>
+            <!--
             <section id="hero">
                 <div class="container">
                     <div class="hero-content">
-                        <div class="hero-image">
-                            <img src="Images/mahimadaga_headshot.png" alt="Mahima Daga">
-                        </div> 
                         <div class="hero-text">
                             <div class="name-box">
                             <h2>Mahima</h2>
@@ -73,13 +77,17 @@
                             <p class="description">A UX Enthusiast based in Toronto, Canada. With a love for creative problem-solving, she's all about making digital experiences more enjoyable and exciting.</p>
                             <div class="hero-buttons">
                                 <a href="#resume" class="btn btn-outline">View Resume</a>
-                                <a href="about.html" class="btn btn-primary">About me</a>
+                                <a href="#contact" class="btn btn-primary">Let's Chat</a>
                             </div>
                         </div>
+                        
+                        <div class="hero-image">
+                            <img src="Images/mahimadaga_headshot.png" alt="Mahima Daga">
+                        </div> 
                     </div>
                 </div>
-            </section>
-        </main>
+            </section> -->
+        
 
             <section id="work" class="container">
                 <h2 class="centered-heading">Work</h2>
@@ -113,6 +121,7 @@
                     </div>
                 </div>
             </section>
+        </main>
     <!-- 
             <section id="contact" class="container">
                 <h2>Let's work together</h2>
